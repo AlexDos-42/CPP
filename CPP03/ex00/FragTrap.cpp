@@ -16,7 +16,6 @@ FragTrap::FragTrap(std::string name): m_hp(100), m_max_hp(100), m_ep(100),
 FragTrap::FragTrap(FragTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 FragTrap			&FragTrap::operator=(FragTrap const &ref)

@@ -16,7 +16,6 @@ ClapTrap::ClapTrap(std::string name): m_hp(100), m_max_hp(100), m_ep(100),
 ClapTrap::ClapTrap(ClapTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 ClapTrap			&ClapTrap::operator=(ClapTrap const &ref)

@@ -24,7 +24,6 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 ScavTrap::ScavTrap(ScavTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 ScavTrap::~ScavTrap()

@@ -13,7 +13,6 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 FragTrap::FragTrap(FragTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 

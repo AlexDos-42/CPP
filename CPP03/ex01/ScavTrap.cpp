@@ -16,7 +16,6 @@ ScavTrap::ScavTrap(std::string name): m_hp(100), m_max_hp(100), m_ep(50),
 ScavTrap::ScavTrap(ScavTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 ScavTrap			&ScavTrap::operator=(ScavTrap const &ref)

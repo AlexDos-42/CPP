@@ -28,7 +28,6 @@ SuperTrap::SuperTrap(std::string name): ClapTrap(name), FragTrap(name), NinjaTra
 SuperTrap::SuperTrap(SuperTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 SuperTrap::~SuperTrap()

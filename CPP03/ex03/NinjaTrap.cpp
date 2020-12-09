@@ -28,7 +28,6 @@ NinjaTrap::NinjaTrap(std::string name): ClapTrap(name)
 NinjaTrap::NinjaTrap(NinjaTrap const &ref)
 {
 	*this = ref;
-	return ;
 }
 
 NinjaTrap::~NinjaTrap()
