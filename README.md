@@ -4,7 +4,7 @@
 |Module	|Content						|Status						|
 |:-:	|:--								|:-:					|
 |		|									|						|				|							|				|
-|00		|[Namespace, class, member functions, stdio stream, initialization lists, static, const](./CPP00)				|100% :heavy_check_mark:	|
+|00		|[Namespace, class, member functions, stdio stream,<br/>initialization lists, static, const](./CPP00)				|100% :heavy_check_mark:	|
 |01		|[Allocation mémoire, réference, pointeur membres, filestreams](./CPP01)			|-	|
 |02		|[Polymorphisme ad-hoc, overloads et classes canoniques](./CPP02)		|-	|
 |03		|[Héritage](./CPP03)								|-				|
