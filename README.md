@@ -1,7 +1,7 @@
 # CPP
 
 
-|Module	|CONTENT							|STATUS						|
+|Module	|Content						|Status						|
 |:-:	|:--								|:-:					|
 |		|									|						|				|							|				|
 |00		|[Namespace, class, member functions, stdio stream, initialization lists, static, const](./CPP00)				|100% :heavy_check_mark:	|
