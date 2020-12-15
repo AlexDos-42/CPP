@@ -1,5 +1,6 @@
 # CPP
 
+Time to dive into Object Oriented Programming!
 
 |Module	|Content						|Status						|
 |:-:	|:--								|:-:					|
