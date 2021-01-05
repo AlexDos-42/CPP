@@ -5,10 +5,7 @@ phonebook::phonebook()
     nb = 0;
 }
 
-phonebook::~phonebook()
-{
-
-}
+phonebook::~phonebook(){}
 
 void phonebook::add()
 {
@@ -37,8 +34,9 @@ void phonebook::search()
                 std::cout << "\e[93m|\e[92m" << std::setw(10) << book[i].getName(j);
             else
                 std::cout << "\e[93m|\e[92m" << book[i].getName(j).substr(0, 9) << ".";
-        std::cout << "\e[93m|\e[0m\n" << std::endl;
+        std::cout << "\e[93m|\e[0m" << std::endl;
     }
+	std::cout << std::endl;
     int index;
     Contact tmp;
     while (1)

@@ -15,64 +15,64 @@ Account::Account(int initial_deposit)
     _nbWithdrawals = 0;
     _nbAccounts += 1;
     _totalAmount += initial_deposit;
-    std::cout << "\e[93mNuméro de compte: " << _accountIndex << "\e[0m" << std::endl;
-    std::cout << "dépot initial: " << initial_deposit << std::endl;
-    std::cout << "\e[92mCompte créé\e[0m" << std::endl;
+    std::cout << "index:\e[94m" << _accountIndex << "\e[0m;amount:\e[94m" << initial_deposit;
+    std::cout << "\e[0m;created" << std::endl;
 }
 
 Account::~Account()
 {
-    std::cout << "\e[93mNuméro de compte: " << _accountIndex << "\e[0m" << std::endl;
-    std::cout << "Argent sur le compte: " << _amount << std::endl;
-    std::cout << "\e[92mCompte cloturé\e[0m" << std::endl;
+    std::cout << "index:\e[94m" << _accountIndex << "\e[0m;amount:\e[94m" << _amount;
+    std::cout << "\e[0m;closed" << std::endl;
     _nbAccounts -= 1;
 }
 
-int	Account::getNbAccounts( void )
+int	Account::getNbAccounts(void)
 {
     return(_nbAccounts);
 }
 
-int	Account::getTotalAmount( void )
+int	Account::getTotalAmount(void)
 {
     return(_totalAmount);
 }
 
-int	Account::getNbDeposits( void )
+int	Account::getNbDeposits(void)
 {
     return(_totalNbDeposits);
 }
 
-int	Account::getNbWithdrawals( void )
+int	Account::getNbWithdrawals(void)
 {
     return(_totalNbWithdrawals);
 }
 
-void	Account::displayAccountsInfos( void )
+void	Account::displayAccountsInfos(void)
 {
-    std::cout << "Nombre de comptes: " << _nbAccounts << std::endl;
-    std::cout << "Argent sur tous les comptes: " << _totalAmount << std::endl;
-    std::cout << "Nombre de dépots: " << _totalNbDeposits << std::endl;
-    std::cout << "Nombre de retraits: " << _totalNbWithdrawals << std::endl;
+    std::cout << "accounts:\e[94m" << _nbAccounts;
+    std::cout << "\e[0m;total:\e[94m" << _totalAmount;
+    std::cout << "\e[0m;deposits:\e[94m" << _totalNbDeposits;
+    std::cout << "\e[0m;withdrawals:\e[94m" << _totalNbWithdrawals << "\e[0m" << std::endl;
 }
 
 void	Account::makeDeposit(int deposit)
 {
-    std::cout << "\e[93mNuméro de compte: " << _accountIndex << "\e[0m" << std::endl;
+    std::cout << "index:\e[94m" << _accountIndex << "\e[0m" << "\e[0m;p_amount:\e[94m" << _amount << "\e[0m"
+		<< ";deposit:\e[94m" << deposit << "\e[0m";
     _amount += deposit;
     _totalAmount += deposit;
     _nbDeposits += 1;
     _totalNbDeposits += 1;
-    std::cout << "Argent sur le compte: " << _amount << std::endl;
+    std::cout << ";amount:\e[94m" << _amount << "\e[0m"; 
+	std::cout << ";nb_deposits:\e[94m" << _nbDeposits << "\e[0m" << std::endl;
 }
 
 bool	Account::makeWithdrawal(int withdrawal)
 {
-    std::cout << "\e[93mNuméro de compte: " << _accountIndex << "\e[0m" << std::endl;
-    std::cout << "Argent sur le compte: " << _amount << std::endl;
+    std::cout << "index:\e[94m" << _accountIndex << "\e[0m";
+    std::cout << ";p_amount:\e[94m" << _amount << "\e[0m";
     if (withdrawal > _amount)
     {
-        std::cout << "\e[91mFonds insufisants; retrait refusé\e[0m" << std::endl;
+        std::cout << ";withdrawal:refused" << std::endl;
         return (false);
     }
     else
@@ -81,7 +81,8 @@ bool	Account::makeWithdrawal(int withdrawal)
         _totalAmount -= withdrawal;
         _nbWithdrawals++;
         _totalNbDeposits++;
-        std::cout << "Argent sur le compte: " << _amount << std::endl;
+        std::cout << ";withdrawal:\e[94m" << withdrawal << "\e[0m;amount:\e[94m" << _amount;
+    	std::cout << "\e[0m;withdrawals:\e[94m" << _nbWithdrawals << "\e[0m" << std::endl;
     }
     
     return (true);
@@ -94,8 +95,8 @@ int		Account::checkAmount() const
 
 void	Account::displayStatus() const
 {
-    std::cout << "\e[93mNuméro de compte: " << _accountIndex << "\e[0m" << std::endl;
-    std::cout << "Argent sur le compte: " << _amount << std::endl;
-    std::cout << "Nombre de dépots: " << _nbDeposits << std::endl;
-    std::cout << "Nombre de retraits: " << _nbWithdrawals << std::endl;
+    std::cout << "index:\e[94m" << _accountIndex << "\e[0m";
+    std::cout << "\e[0m;amount:\e[94m" << _amount;
+    std::cout << "\e[0m;deposits:\e[94m" << _nbDeposits;
+    std::cout << "\e[0m;withdrawals:\e[94m" << _nbWithdrawals << "\e[0m" << std::endl;
 }
