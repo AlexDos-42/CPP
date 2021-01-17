@@ -12,6 +12,7 @@ int main()
     slow.announce();
     std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');;
+    
     std::cout << "How many Fast zombies do you see ?\n➜ ";
     std::cin >> n;
     ZombieHorde fast("fast", n);

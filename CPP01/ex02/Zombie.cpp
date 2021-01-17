@@ -27,13 +27,14 @@ std::string Zombie::baptem()
 
     for (int i = 0; i < 10; i++)
     {
-        if (i % 2)
+        if (i == 4)
+            newname += " ";
+        else if (i % 2)
             newname += abc[26.0 * rand() / (RAND_MAX)];
         else
             newname += aaa[6.0 * rand() / (RAND_MAX)];
     }
     newname[0] = std::toupper(newname[0]);
-
     return(newname);
 }
 

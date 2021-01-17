@@ -8,6 +8,5 @@ int main()
 
     std::cout << "ptr: " << *ptr << std::endl;
     std::cout << "ref: " << ref << std::endl;
-
     return (0);
 }
