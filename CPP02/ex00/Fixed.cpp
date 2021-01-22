@@ -1,5 +1,6 @@
 #include "Fixed.hpp"
 #include <iostream>
+#include <string>
 
 Fixed::Fixed(): value(0)
 {
