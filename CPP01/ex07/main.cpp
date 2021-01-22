@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 #define ERROR_ARGC "Error: replace: wrong number of parameters"
 #define ERROR_NULL "Error: replace: parameter can't be empty"
@@ -34,7 +35,7 @@ int main(int argc, char **argv)
     }
     filename = argv[1];
     filename.replace(filename.size(), 9, ".replace");
-    ofs.open(filename);
+    ofs.open(filename.c_str());
     filename = argv[2];
     while (std::getline(ifs, tmp))
     {

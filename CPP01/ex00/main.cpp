@@ -29,9 +29,8 @@ void ponyOnTheStack()
 void ponyOnTheHeap()
 {
     std::string str;
-    Pony *MyPony{};
+    Pony *MyPony = new Pony();
 
-    MyPony = new Pony();
     while (1)
     {
         std::cout << "What's your pony gonna do ?" << std::endl;

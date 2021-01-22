@@ -1,4 +1,5 @@
 #include "Zombie.hpp"
+#include <cstdlib>
 
 Zombie::Zombie(): name(std::string()), type(std::string())
 {}
@@ -21,8 +22,8 @@ void Zombie::advert()
 
 std::string Zombie::baptem()
 {
-    std::string abc{"abcdefghijklmnopqrstuvwxyz"};
-    std::string aaa{"aeiouy"};
+    std::string abc("abcdefghijklmnopqrstuvwxyz");
+    std::string aaa("aeiouy");
     std::string newname;
 
     for (int i = 0; i < 10; i++)

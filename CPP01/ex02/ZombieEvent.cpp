@@ -24,7 +24,7 @@ Zombie *ZombieEvent::newZombie(std::string str)
 
 Zombie *ZombieEvent::randomChump()
 {
-    Zombie *zombie = nullptr;
+    Zombie *zombie = 0;
     std::string newname;
 
     zombie = new Zombie(zombie->baptem(), type);
