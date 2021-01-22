@@ -30,27 +30,28 @@ all: $(NAME)
 
 $(OBJ_DIR)/%.o: $(PATHSRCS)/%.cpp
 	@mkdir -p $(OBJ_DIR)
+	@make -s titre
 	@clang++ $(FLAGS) -c $< -o $@
-	@echo "$(_YELLOW)Compiling :$(_WHITE) $<$(_R)"
+	@printf "$(_YELLOW)Compiling :$(_WHITE) $<$(_R)\n"
 
-$(NAME): titre $(OBJ)
-	@echo "$(_YELLOW)Compilation completed.$(_R)"
+$(NAME):  $(OBJ)
+	@printf "$(_YELLOW)Compilation completed.$(_R)\n"
 	@(clang++ $(FLAGS) $(OBJ) -o $(NAME))
-	@(echo "$(_YELLOW)Executable $(NAME) created.$(_R)")
+	@(printf "$(_YELLOW)Executable $(NAME) created.$(_R)\n")
 
 clean:
-	@echo "$(_BLUE)Clean$(_R)"
+	@printf "$(_BLUE)Clean$(_R)\n"
 	@(rm -rf ./srcs/*.o)
 	@(rm -rf $(OBJ_DIR))
 
 fclean:	clean
-	@echo "$(_BLUE)Fclean$(_R)"
+	@printf "$(_BLUE)Fclean$(_R)\n"
 	@(rm -rf $(NAME))
 
 re:	fclean all
 
 titre:
-	@echo "\e[1;93mCPP: Ex07: Sed - 42 project -$(_R)"
-	@echo "\e[1;93m_____________________________$(_R)"
+	@printf "\e[1;93mCPP: Ex07: Sed - 42 project -$(_R)\n"
+	@printf "\e[1;93m_____________________________$(_R)\n"
 
 .PHONY:	all clean fclean re titre

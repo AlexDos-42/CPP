@@ -1,7 +1,10 @@
 #include "Brain.hpp"
 
-Brain::Brain() : weight{1500}, IQ{120}
-{}
+Brain::Brain() : IQ{120}, weight{1500}
+{
+    (void)IQ;
+    (void)weight;
+}
 
 Brain::~Brain()
 {}
