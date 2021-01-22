@@ -1,4 +1,5 @@
 #include "ScavTrap.hpp"
+#include <cstdlib>
 
 ScavTrap::ScavTrap(): m_hp(100), m_max_hp(100), m_ep(50),
     m_max_ep(50), m_lvl(1), m_melee_dmg(20), m_range_dmg(15), m_armor(3)

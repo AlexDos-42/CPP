@@ -1,4 +1,5 @@
 #include "FragTrap.hpp"
+#include <cstdlib>
 
 FragTrap::FragTrap(): m_hp(100), m_max_hp(100), m_ep(100),
     m_max_ep(100), m_lvl(1), m_melee_dmg(30), m_range_dmg(20), m_armor(5)

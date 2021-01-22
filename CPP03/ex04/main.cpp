@@ -3,6 +3,7 @@
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
 #include "SuperTrap.hpp"
+#include <cstdlib>
 
 int	main(void)
 {
