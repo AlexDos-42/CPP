@@ -64,7 +64,7 @@ void		Character::attack(Enemy *enemy)
 		std::cout << m_name << " attacks " << enemy->getType() << " with a " << m_weapon->getName() << std::endl;
 		m_weapon->attack();
 		enemy->takeDamage(m_weapon->getDamage());
-		std::cout << enemy->getType() << " has " << enemy->getHp() << " HP " << std::endl;
+		//std::cout << enemy->getType() << " has " << enemy->getHp() << " HP " << std::endl;
 		m_ap -= m_weapon->getApCost();
 		if (m_ap < 0)
 			m_ap = 0;

@@ -17,7 +17,6 @@ RadScorpion::~RadScorpion()
 
 RadScorpion		&RadScorpion::operator=(const RadScorpion &ref)
 {
-    m_hp = ref.m_hp;
-	m_type = ref.m_type;
+    Enemy::operator=(ref);
 	return *this;
 }

@@ -17,8 +17,7 @@ SuperMutant::~SuperMutant()
 
 SuperMutant		&SuperMutant::operator=(const SuperMutant &ref)
 {
-	m_hp = ref.m_hp;
-    m_type = ref.m_type;
+	Enemy::operator=(ref);
 	return *this;
 }
 

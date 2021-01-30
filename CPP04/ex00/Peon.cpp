@@ -2,7 +2,7 @@
 
 Peon::Peon(std::string const name): Victim(name)
 {
-	std::cout << "Zog zog." << std::endl;
+	std::cout << "\e[94mZog zog.\e[0m" << std::endl;
 }
 
 Peon::Peon(const Peon &ref): Victim(ref)
@@ -12,7 +12,7 @@ Peon::Peon(const Peon &ref): Victim(ref)
 
 Peon::~Peon()
 {
-	std::cout << "Bleuark..." << std::endl;
+	std::cout << "\e[94mBleuark...\e[0m" << std::endl;
 }
 
 

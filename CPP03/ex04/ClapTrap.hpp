@@ -9,7 +9,7 @@ class ClapTrap
 	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &ref);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	int					getHp();
 	std::string			getName();

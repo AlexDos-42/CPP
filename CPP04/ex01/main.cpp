@@ -5,70 +5,81 @@
 #include "SuperMutant.hpp"
 #include "RadScorpion.hpp"
 #include "Character.hpp"
+#include "FlowerPower.hpp"
+#include "Brick.hpp"
 
 int main(void)
 {
-	Character	*moi = new Character("moi");
+	Character	*me = new Character("me");
 
-	std::cout << *moi;
+	std::cout << *me;
 	
 	Enemy		*b = new RadScorpion();
 
 	AWeapon		*pr = new PlasmaRifle();
 	AWeapon		*pf = new PowerFist();
 
-	moi->equip(pr);
-	std::cout << *moi;
-	moi->equip(pf);
+	me->equip(pr);
+	std::cout << *me;
+	me->equip(pf);
 
-	moi->attack(b);
-	std::cout << *moi;
-	moi->equip(pr);
-	std::cout << *moi;
-	moi->attack(b);
-	std::cout << *moi;
-	moi->attack(b);
-	std::cout << *moi;
+	me->attack(b);
+	std::cout << *me;
+	me->equip(pr);
+	std::cout << *me;
+	me->attack(b);
+	std::cout << *me;
+	me->attack(b);
+	std::cout << *me;
 
 	std::cout << std::endl;
 
 	Enemy		*c = new SuperMutant();
 
-	moi->attack(c);
-	std::cout << *moi;
-	moi->attack(c);
-	std::cout << *moi;
-	moi->attack(c);
-	std::cout << *moi;
-	moi->equip(pf);
-	std::cout << *moi;
-	moi->attack(c);
-	std::cout << *moi;
-	moi->recoverAP();
-	std::cout << *moi;
-	moi->recoverAP();
-	std::cout << *moi;
-	moi->recoverAP();
-	std::cout << *moi;
-	moi->recoverAP();
-	std::cout << *moi;
-    moi->attack(c);
-	std::cout << *moi;
-	moi->attack(c);
-	std::cout << *moi;
-	moi->attack(c);
-	std::cout << *moi;
+	me->attack(c);
+	std::cout << *me;
+	me->attack(c);
+	std::cout << *me;
+	me->attack(c);
+	std::cout << *me;
+	me->equip(pf);
+	std::cout << *me;
+	me->attack(c);
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+    me->attack(c);
+	std::cout << *me;
+	me->attack(c);
+	std::cout << *me;
+	me->attack(c);
+	std::cout << *me;
 
 	std::cout << std::endl;
 
-	Character	*toi = new Character("toi");
+	Character	*you = new Character("you");
 
-	std::cout << *toi;
-	toi->attack(c);
+	std::cout << *you;
+	you->attack(c);
+
+	Enemy		*d = new Brick();
+	AWeapon		*fp = new FlowerPower();
+
+	you->equip(fp);
+	you->attack(d);
+	std::cout << *you;
 	
-	delete moi;
+	delete me;
 	delete pr;
 	delete pf;
-	delete toi;
+	delete fp;
+	delete you;
+	delete d;
 	return (0);
 }
