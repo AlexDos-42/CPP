@@ -18,14 +18,14 @@ TacticalMarine::~TacticalMarine()
 
 TacticalMarine		&TacticalMarine::operator=(const TacticalMarine &ref)
 {
-	*this = ref;
+	(void)ref;
 	return *this;
 }
 
 ISpaceMarine	*TacticalMarine::clone() const
 {
-	TacticalMarine	*aClone = new TacticalMarine(*this);
-	return aClone;
+	TacticalMarine	*clone = new TacticalMarine(*this);
+	return clone;
 }
 
 void		TacticalMarine::battleCry() const

@@ -24,8 +24,8 @@ AssaultTerminator	&AssaultTerminator::operator=(const AssaultTerminator &ref)
 
 ISpaceMarine		*AssaultTerminator::clone() const
 {
-	AssaultTerminator	*aClone = new AssaultTerminator(*this);
-	return aClone;
+	AssaultTerminator	*clone = new AssaultTerminator(*this);
+	return clone;
 }
 
 void			AssaultTerminator::battleCry() const
