@@ -19,7 +19,7 @@ class Character: public ICharacter
 	private:
         std::string	m_name;
         AMateria	*m_materia[4];
-        int         m_nb;
+        int             m_nb;
 };
 
 #endif

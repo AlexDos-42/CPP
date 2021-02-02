@@ -26,6 +26,7 @@ Character::~Character()
 Character		&Character::operator=(const Character &copy)
 {
     this->m_name = copy.m_name;
+	this->m_nb = copy.m_nb;
     for (int i = 0; i < 4; i++)
     {
         if (copy.m_materia[i])
@@ -61,7 +62,7 @@ void			Character::unequip(int idx)
 	{
 		for (int i = idx; i < 3; i++)
 		{
-			m_materia[i] = _materia[i + 1];
+			m_materia[i] = m_materia[i + 1];
 			m_materia[i + 1] = NULL;
 		}
 		m_nb--;
@@ -70,6 +71,6 @@ void			Character::unequip(int idx)
 
 void			Character::use(int idx, ICharacter &target)
 {
-	if (idx >= 0 && idx < _nbmat && m_materia[idx])
+	if (idx >= 0 && idx < m_nb && m_materia[idx])
 		m_materia[idx]->use(target);
 }
