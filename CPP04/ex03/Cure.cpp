@@ -11,12 +11,6 @@ Cure::Cure(const Cure &copy): AMateria("cure")
 Cure::~Cure()
 {}
 
-Cure		&Cure::operator=(const Cure &copy)
-{
-	this->_xp = copy._xp;
-	return (*this);
-}
-
 AMateria	*Cure::clone() const
 {
 	Cure *copy = new Cure(*this);

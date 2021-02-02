@@ -11,12 +11,6 @@ Ice::Ice(const Ice &copy): AMateria("ice")
 Ice::~Ice()
 {}
 
-Ice		&Ice::operator=(const Ice &copy)
-{
-	this->_xp = copy._xp;
-	return (*this);
-}
-
 AMateria	*Ice::clone() const
 {
 	Ice *copy = new Ice(*this);
