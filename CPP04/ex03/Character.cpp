@@ -1,5 +1,11 @@
 #include "Character.hpp"
 
+Character::Character(std::string const &name): m_name("NoName"), m_nb(0)
+{
+	for (int i = 0; i < 4; i++)
+		m_materia[i] = NULL;
+}
+
 Character::Character(std::string const &name): m_name(name), m_nb(0)
 {
 	for (int i = 0; i < 4; i++)

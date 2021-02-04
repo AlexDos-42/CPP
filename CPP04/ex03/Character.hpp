@@ -6,6 +6,7 @@
 class Character: public ICharacter
 {
 	public:
+        Character();
         Character(std::string const &name);
         Character(const Character &copy);
         virtual ~Character();
