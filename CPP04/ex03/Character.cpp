@@ -1,6 +1,6 @@
 #include "Character.hpp"
 
-Character::Character(std::string const &name): m_name("NoName"), m_nb(0)
+Character::Character(): m_name("NoName"), m_nb(0)
 {
 	for (int i = 0; i < 4; i++)
 		m_materia[i] = NULL;
@@ -52,11 +52,6 @@ void			Character::equip(AMateria *m)
 {
 	if (m_nb < 4 && m)
 	{
-		for (int i = 0; i < m_nb; i++)
-		{
-			if (m_materia[i] == m)
-				return ;
-		}
 		m_materia[m_nb] = m;
 		m_nb++;
 	}

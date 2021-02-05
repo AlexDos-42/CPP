@@ -1,5 +1,10 @@
 #include "Peon.hpp"
 
+Peon::Peon(): Victim("NoName")
+{
+	std::cout << "\e[94mZog zog.\e[0m" << std::endl;
+}
+
 Peon::Peon(std::string const name): Victim(name)
 {
 	std::cout << "\e[94mZog zog.\e[0m" << std::endl;

@@ -7,13 +7,14 @@
 class Peon: public Victim
 {
 	public:
-	Peon(std::string const name);
-	Peon(const Peon &ref);
-	~Peon();
+		Peon();
+		Peon(std::string const name);
+		Peon(const Peon &ref);
+		virtual ~Peon();
 
-	Peon		&operator=(const Peon&);
+		Peon		&operator=(const Peon&);
 
-	void		getPolymorphed(void) const;
+		void		getPolymorphed(void) const;
 };
 
 #endif

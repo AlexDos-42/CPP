@@ -7,13 +7,14 @@
 class Child: public Victim
 {
 	public:
-	Child(std::string const name);
-	Child(const Child &ref);
-	~Child();
+		Child();
+		Child(std::string const name);
+		Child(const Child &ref);
+		virtual ~Child();
 
-	Child		&operator=(const Child&);
+		Child		&operator=(const Child&);
 
-	void		getPolymorphed(void) const;
+		void		getPolymorphed(void) const;
 };
 
 #endif

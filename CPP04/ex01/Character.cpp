@@ -1,5 +1,7 @@
 #include "Character.hpp"
 
+Character::Character(): m_name("NoName"), m_ap(0), m_weapon(0) {}
+
 Character::Character(std::string const &name): m_name(name), m_ap(40), m_weapon(0) {}
 
 Character::Character(const Character &ref)

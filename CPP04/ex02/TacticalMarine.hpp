@@ -7,15 +7,15 @@
 class TacticalMarine: public ISpaceMarine
 {
 	public:
-	TacticalMarine();
-	TacticalMarine(const TacticalMarine &ref);
-	virtual ~TacticalMarine();
+		TacticalMarine();
+		TacticalMarine(const TacticalMarine &ref);
+		virtual ~TacticalMarine();
 
-	TacticalMarine	&operator=(const TacticalMarine&);
-	virtual ISpaceMarine	*clone() const;
-	virtual void		    battleCry() const;
-	virtual void		    rangedAttack() const;
-	virtual void		    meleeAttack() const;
+		TacticalMarine	&operator=(const TacticalMarine&);
+		virtual ISpaceMarine	*clone() const;
+		virtual void		    battleCry() const;
+		virtual void		    rangedAttack() const;
+		virtual void		    meleeAttack() const;
 };
 
 #endif

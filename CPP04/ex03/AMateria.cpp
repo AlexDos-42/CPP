@@ -1,5 +1,8 @@
 #include "AMateria.hpp"
 
+AMateria::AMateria() : _xp(0), m_type("NoType")
+{}
+
 AMateria::AMateria(std::string const &type) : _xp(0), m_type(type)
 {}
 

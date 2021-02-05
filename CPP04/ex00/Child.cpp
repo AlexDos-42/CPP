@@ -1,5 +1,10 @@
 #include "Child.hpp"
 
+Child::Child(): Victim("NoName")
+{
+	std::cout << "\e[94mHellooooo\e[0m" << std::endl;
+}
+
 Child::Child(std::string const name): Victim(name)
 {
 	std::cout << "\e[94mHellooooo\e[0m" << std::endl;

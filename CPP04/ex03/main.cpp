@@ -18,6 +18,20 @@ int main(void)
     ICharacter* bob = new Character("bob");
     moi->use(0, *bob);
     moi->use(1, *bob);
+    
+    std::cout << std::endl;
+    tmp = src->createMateria("cure");
+    std::cout << tmp->getType() << " has " << tmp->getXP() << "XP" << std::endl;
+    moi->equip(tmp);
+    moi->use(2, *bob);
+    std::cout << tmp->getType() << " has " << tmp->getXP() << "XP" << std::endl;
+    moi->unequip(2);
+    moi->use(2, *bob);
+    std::cout << tmp->getType() << " has " << tmp->getXP() << "XP" << std::endl;
+    moi->equip(tmp);
+    moi->use(3, *bob);
+
+
     delete bob;
     delete moi;
     delete src;

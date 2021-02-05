@@ -1,5 +1,8 @@
 #include "AWeapon.hpp"
 
+AWeapon::AWeapon(): m_name("NoNname"), m_apcost(0), m_damage(0)
+{}
+
 AWeapon::AWeapon(std::string const &name, int apcost, int damage): m_name(name), m_apcost(apcost), m_damage(damage)
 {}
 

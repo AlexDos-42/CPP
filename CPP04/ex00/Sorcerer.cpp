@@ -1,5 +1,10 @@
 #include "Sorcerer.hpp"
 
+Sorcerer::Sorcerer(): m_name("NoName"), m_title("The unknown")
+{
+	std::cout << m_name << ", " << m_title << ", is born!" << std::endl;
+}
+
 Sorcerer::Sorcerer(std::string const name, std::string const title): m_name(name), m_title(title)
 {
 	std::cout << m_name << ", " << m_title << ", is born!" << std::endl;

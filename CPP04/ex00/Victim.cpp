@@ -1,5 +1,10 @@
 #include "Victim.hpp"
 
+Victim::Victim(): m_name("NoName")
+{
+	std::cout << "Some random victim called " << m_name << " just appeared!" << std::endl;
+}
+
 Victim::Victim(std::string const name): m_name(name)
 {
 	std::cout << "Some random victim called " << m_name << " just appeared!" << std::endl;

@@ -7,12 +7,12 @@
 class FlowerPower: public AWeapon
 {
 	public:
-	FlowerPower();
-	FlowerPower(const FlowerPower &ref);
-	virtual ~FlowerPower();
+		FlowerPower();
+		FlowerPower(const FlowerPower &ref);
+		virtual ~FlowerPower();
 
-	FlowerPower	    &operator=(const FlowerPower&);
-	virtual void	attack() const;
+		FlowerPower	    &operator=(const FlowerPower&);
+		virtual void	attack() const;
 };
 
 #endif
