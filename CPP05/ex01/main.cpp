@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+
 int	main(void)
 {
 	Bureaucrat julie("Julie", 3);
@@ -81,18 +82,44 @@ int	main(void)
 	
 	std::cout << std::endl;
 	std::cout << "############## ex01 ##############" << std::endl;
-
 	Form A150("A150", 150, 150);
 	Form B149("B149", 149, 150);
-	Form C1("C1", 1, 1);
+	Form Z111("B149", 150, 149);
 	std::cout << boby << julie;
+	std::cerr << A150;
 	try
 	{
-		A150.beSigned(boby);
-		A150.getStatus();
-		B149.beSigned(boby);
-		B149.beSigned(julie);
-		B149.getStatus();
+		boby.signForm(A150);
+		std::cerr << A150;
+	}
+	catch (std::exception &ex)
+	{
+		std::cerr << ex.what() << std::endl;
+	}
+	try
+	{
+		boby.signForm(B149);
+	}
+	catch (std::exception &ex)
+	{
+		std::cerr << ex.what() << std::endl;
+	}
+	std::cerr << B149;
+	try
+	{
+		Form C1313("C1313", 1, 0);
+		std::cerr << C1313;
+		boby.signForm(C1313);
+	}
+	catch (std::exception &ex)
+	{
+		std::cerr << ex.what() << std::endl;
+	}
+	try
+	{
+		Form C1121("C1121", 1, 151);
+		std::cerr << C1121;
+		boby.signForm(C1121);
 	}
 	catch (std::exception &ex)
 	{

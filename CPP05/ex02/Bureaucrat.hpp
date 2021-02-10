@@ -3,15 +3,17 @@
 
 # include <iostream>
 # include <exception>
+# include "Form.hpp"
+class Form;
 
 class Bureaucrat
 {
 	private:
 	std::string const	m_name;
 	int			        m_grade;
+	Bureaucrat();
 
 	public:
-	Bureaucrat();
 	Bureaucrat(std::string const &name, int grade);
 	Bureaucrat(const Bureaucrat &copy);
 	~Bureaucrat();
@@ -22,6 +24,9 @@ class Bureaucrat
 
 	void				increase();
 	void				decrease();
+
+	void		signForm(Form &form);
+	void		executeForm(Form const &form);
 
 	struct GradeTooHighException: std::exception{
 		virtual const char *what() const throw(){
