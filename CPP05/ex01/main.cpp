@@ -6,7 +6,7 @@ int	main(void)
 	Bureaucrat julie("Julie", 3);
 	Bureaucrat boby("Boby", 149);
 
-	std::cout << "############## ex00 ##############" << std::endl;
+	std::cout << "\e[91m############## ex00 ##############=\e[0m" << std::endl;
 	std::cout << julie;
 	try
 	{
@@ -81,7 +81,7 @@ int	main(void)
 	}
 	
 	std::cout << std::endl;
-	std::cout << "############## ex01 ##############" << std::endl;
+	std::cout << "\e[91m############## ex01 ##############=\e[0m" << std::endl;
 	Form A150("A150", 150, 150);
 	Form B149("B149", 149, 150);
 	Form Z111("B149", 150, 149);

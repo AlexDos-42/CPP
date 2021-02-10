@@ -1,10 +1,9 @@
-
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): Form("Robotomy Request", 72, 45), _target(NULL)
+RobotomyRequestForm::RobotomyRequestForm(): Form("Robotomy Request", 72, 45), m_target(NULL)
 {}
 
-RobotomyRequestForm::RobotomyRequestForm(std::string const &target): Form("Robotomy Request", 72, 45), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string const &target): Form("Robotomy Request", 72, 45), m_target(target)
 {}
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy): Form(copy.getName(), copy.getGradeSign(), copy.getGradeExec())
@@ -28,7 +27,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	Form::execute(executor);
 	std::cout << "TARATARATATAC ... *" << std::endl;
 	if (rand() % 3 == 2) 
-		std::cout << _target << " has been robotomized." << std::endl;
+		std::cout << m_target << " has been robotomized." << std::endl;
 	else
-		std::cout << "Robotomization on " << _target << " failed." << std::endl;
+		std::cout << "Robotomization on " << m_target << " failed." << std::endl;
 }

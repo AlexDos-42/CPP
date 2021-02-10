@@ -68,10 +68,10 @@ void			Form::execute(Bureaucrat const &executor) const
 std::ostream		&operator<<(std::ostream &output, const Form &form)
 {
 	if (form.getStatus() == true)
-		output << "Form " << form.getName() << ", signed [grade required to sign: " << form.getGradeSign()
-		<< "] [grade required to execute: " << form.getGradeExec() << "]" << std::endl;
+		output << "Form " << form.getName() << " is signed. Grade required: " << form.getGradeSign()
+		<< " to sign and " << form.getGradeExec()  << " to execute" << std::endl;
 	else
-		output << "Form " << form.getName() << ", unsigned [grade required to sign: " << form.getGradeSign()
-		<< "] [grade required to execute: " << form.getGradeExec() << "]" << std::endl;
+		output << "Form " << form.getName() << " is unsigned. Grade required: " << form.getGradeSign()
+		<<" to sign and " << form.getGradeExec() << " to execute" << std::endl;
 	return (output);
 }

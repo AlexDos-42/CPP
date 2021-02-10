@@ -25,7 +25,6 @@ class		Form
 		bool					getStatus() const;
 		int						getGradeSign() const;
 		int						getGradeExec() const;
-
 		void					beSigned(Bureaucrat &bureaucrat);
 
 		struct GradeTooHighException: std::exception

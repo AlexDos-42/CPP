@@ -9,7 +9,7 @@ int	main(void)
 	Bureaucrat julie("Julie", 3);
 	Bureaucrat boby("Boby", 149);
 
-	std::cout << "############## ex00 ##############" << std::endl;
+	std::cout << "\e[91m############## ex00 ##############=\e[0m" << std::endl;
 	std::cout << julie;
 	try
 	{
@@ -84,7 +84,7 @@ int	main(void)
 	}
 	
 	std::cout << std::endl;
-	std::cout << "############## ex01 ##############" << std::endl;
+	std::cout << "\e[91m############## ex01 ##############=\e[0m" << std::endl;
 	Form A150("A150", 150, 150);
 	Form B149("B149", 149, 150);
 	Form Z111("B149", 150, 149);
@@ -127,18 +127,18 @@ int	main(void)
 		std::cerr << ex.what() << std::endl << std::endl;
 	}
 
-	std::cout << "############## ex02 ##############" << std::endl;
+	std::cout << "\e[91m############## ex02 ##############=\e[0m" << std::endl;
 
 	Bureaucrat jim("Jim", 138);
 
-	Form *a = new ShrubberyCreationForm("A");
+	Form *File = new ShrubberyCreationForm("File");
 
 	std::cout << jim;
-	std::cout << *a;
+	std::cout << *File;
 	
 	try
 	{
-		jim.signForm(*a);
+		jim.signForm(*File);
 	}
 	catch (std::exception &e)
 	{
@@ -146,18 +146,19 @@ int	main(void)
 	}
 	try
 	{
-		jim.executeForm(*a);
+		jim.executeForm(*File);
 	}
 	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	jim.signForm(*a);
 	jim.increase();
+	jim.signForm(*File);
 	std::cout << jim;
+	std::cout << *File;
 	try
 	{
-		jim.executeForm(*a);
+		jim.executeForm(*File);
 	}
 	catch (std::exception &e)
 	{
@@ -165,21 +166,38 @@ int	main(void)
 	}
 
 	Bureaucrat bob("Bob", 5);
-	Form *b = new ShrubberyCreationForm("B");
+	Form *File2 = new ShrubberyCreationForm("File2");
 	try
 	{
-		bob.executeForm(*b);
+		bob.executeForm(*File2);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl << std::endl;
+	}
+
+	Form *File3 = new RobotomyRequestForm("File3");
+	std::cout << *File3;
+	try
+	{
+		jim.signForm(*File3);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	try
+	{
+		jim.executeForm(*File3);
 	}
 	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
 
-	Form *c = new RobotomyRequestForm("C");
-	std::cout << *c;
 	try
 	{
-		jim.signForm(*c);
+		bob.executeForm(*File3);
 	}
 	catch (std::exception &e)
 	{
@@ -187,16 +205,7 @@ int	main(void)
 	}
 	try
 	{
-		jim.executeForm(*c);
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-
-	try
-	{
-		bob.executeForm(*c);
+		bob.signForm(*File3);
 	}
 	catch (std::exception &e)
 	{
@@ -204,26 +213,18 @@ int	main(void)
 	}
 	try
 	{
-		bob.signForm(*c);
-	}
-	catch (std::exception &e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	try
-	{
-		bob.executeForm(*c);
+		bob.executeForm(*File3);
 	}
 	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
 
-	Form *d = new PresidentialPardonForm("D");
-	std::cout << *d;
+	Form *File4 = new PresidentialPardonForm("File4");
+	std::cout << std::endl << *File4;
 	try
 	{
-		bob.signForm(*d);
+		bob.signForm(*File4);
 	}
 	catch (std::exception &e)
 	{
@@ -231,7 +232,7 @@ int	main(void)
 	}
 	try
 	{
-		bob.executeForm(*d);
+		bob.executeForm(*File4);
 	}
 	catch (std::exception &e)
 	{
@@ -240,9 +241,9 @@ int	main(void)
 
 
 
-	delete a;
-	delete b;
-	delete c;
-	delete d;
+	delete File;
+	delete File2;
+	delete File3;
+	delete File4;
 	return (0);
 }
