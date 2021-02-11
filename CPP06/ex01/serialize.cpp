@@ -1,25 +1,29 @@
 #include "serialize.hpp"
+#pragma pack(2)
 
 void	*serialize(void)
 {
-	char		*data = new char[16 + sizeof(int)];
+	Data		*data = new Data();
 	std::string	randAlpha("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
 
 	std::srand(time(NULL));
 	for (int i = 0; i < 8; i++){
-		data[i] = randAlpha[rand() % randAlpha.length()];
-		data[i + 8 + sizeof(int)] = randAlpha[rand() % randAlpha.length()];
+		data->s1 += randAlpha[rand() % randAlpha.length()];
+		data->s2 += randAlpha[rand() % randAlpha.length()];
 	}
-	*reinterpret_cast<int*>(data + 8) = std::rand();
-	return (data);
+	data->n = std::rand();
+	std::cout << "\e[91mValues of data serialize:\n\e[0m\t"
+			<< data->s1 << " " << data->n << " " << data->s2 << std::endl;
+	std::cout << "\e[91mSize of raw:\n\t\e[0m";
+	std::cout << sizeof(data->s1) + sizeof(data->s1) + sizeof(data->n) << std::endl;
+	std::cout << sizeof(*data) << std::endl;
+	return (reinterpret_cast<void*>(data));
 }
 
 Data	*deserialize(void *raw)
 {
-	Data *data = new Data;
+	Data *data;
 
-	data->s1 = std::string(reinterpret_cast<char*>(raw), 8);
-	data->n = *reinterpret_cast<int*>(reinterpret_cast<char*>(raw) + 8);
-	data->s2 = std::string(reinterpret_cast<char*>(raw) + 8 + sizeof(int), 8);
+	data = reinterpret_cast<Data*>(raw);
 	return (data);
 }
