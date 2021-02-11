@@ -11,9 +11,9 @@ _WHITE		=\e[97m
 
 ###############################
 
-NAME = convert
+NAME = serialize
 
-SRC = 	convert.cpp \
+SRC = 	serialize.cpp \
 		main.cpp 	\
 
 PATHSRCS = .
@@ -51,7 +51,7 @@ fclean:	clean
 re:	fclean all
 
 titre:
-	@printf "\e[1;93mCPP: Ex00: Convert - 42 project -$(_R)\n"
+	@printf "\e[1;93mCPP: Ex00: Serialize - 42 project -$(_R)\n"
 	@printf "\e[1;93m___________________________________$(_R)\n"
 
 .PHONY:	all clean fclean re titre
