@@ -1,5 +1,4 @@
 #include "serialize.hpp"
-#pragma pack(2)
 
 void	*serialize(void)
 {
@@ -14,9 +13,8 @@ void	*serialize(void)
 	data->n = std::rand();
 	std::cout << "\e[91mValues of data serialize:\n\e[0m\t"
 			<< data->s1 << " " << data->n << " " << data->s2 << std::endl;
-	std::cout << "\e[91mSize of raw:\n\t\e[0m";
-	std::cout << sizeof(data->s1) + sizeof(data->s1) + sizeof(data->n) << std::endl;
-	std::cout << sizeof(*data) << std::endl;
+	//std::cout << "\e[91mSize of raw on IOS:\n\t\e[0m";
+	//std::cout << sizeof(data->s1) + sizeof(data->s1) + sizeof(data->n) << std::endl;
 	return (reinterpret_cast<void*>(data));
 }
 
