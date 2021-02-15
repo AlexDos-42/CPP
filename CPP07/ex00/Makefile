@@ -11,9 +11,9 @@ _WHITE		=\e[97m
 
 ###############################
 
-NAME = serialize
+NAME = base
 
-SRC = main.cpp
+SRC = main.cpp 	\
 
 PATHSRCS = .
 SRCS = $(addprefix $(PATHSRCS)/,$(SRC))
@@ -50,7 +50,7 @@ fclean:	clean
 re:	fclean all
 
 titre:
-	@printf "\e[1;93mCPP: Ex00: Serialize - 42 project -$(_R)\n"
+	@printf "\e[1;93mCPP: Ex00: Base - 42 project -$(_R)\n"
 	@printf "\e[1;93m___________________________________$(_R)\n"
 
 .PHONY:	all clean fclean re titre

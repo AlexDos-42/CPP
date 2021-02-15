@@ -1,7 +1,6 @@
-#ifndef SERIALIZE
-# define SERIALIZE
+#ifndef MAIN
+# define MAIN
 
-# include <iostream>
 # include <ctime>
 
 struct	Data { std::string s1; int n; std::string s2; };

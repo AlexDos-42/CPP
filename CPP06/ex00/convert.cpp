@@ -67,25 +67,23 @@ int		Convert::isInt(std::string str) const
 int		Convert::isFloat(std::string str) const
 {
 	size_t	i;
-	int	dot;
+	int	n;
 
 	i = 0;
-	dot = 0;
+	n = 0;
 	if (str[0] == '+' || str[0] == '-')
 		i = 1;
 	if (str[str.length() - 1] != 'f')
 		return (0);
 	for ( ; i < str.length() - 1; i++)
-	{
 		if (!std::isdigit(str[i]))
 		{
 			if (str[i] == '.')
-				dot++;
+				n++;
 			else
 				return (0);
 		}
-	}
-	if (dot != 1)
+	if (n != 1)
 		return (0);
 	return (1);
 }
@@ -93,23 +91,21 @@ int		Convert::isFloat(std::string str) const
 int		Convert::isDouble(std::string str) const
 {
 	size_t	i;
-	int	dot;
+	int	n;
 
 	i = 0;
-	dot = 0;
+	n = 0;
 	if (str[0] == '+' || str[0] == '-')
 		i = 1;
 	for ( ; i < str.length(); i++)
-	{
 		if (!std::isdigit(str[i]))
 		{
 			if (str[i] == '.')
-				dot++;
+				n++;
 			else
 				return (0);
 		}
-	}
-	if (dot != 1)
+	if (n != 1)
 		return (0);
 	return (1);
 }
