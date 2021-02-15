@@ -20,7 +20,7 @@ void	*serialize(void)
 
 	std::cout << "\e[91mValues of data serialize:\n\e[0m\t"
 			<< data->s1 << " " << data->n << " " << data->s2 << std::endl;
-	std::cout << "\e[91mSize of raw on IOS:\n\t\e[0m";
+	std::cout << "\e[91mSize of raw:\n\t\e[0m";
 	std::cout << sizeof(data->s1) + sizeof(data->s1) + sizeof(data->n) << std::endl;
 	return (reinterpret_cast<void*>(data));
 }
@@ -37,7 +37,7 @@ int	main()
 	void *raw = serialize();
 	Data *data = deserialize(raw);
 
-	std::cout << "\e[91mSize of data on IOS:\n\t\e[0m";
+	std::cout << "\e[91mSize of data:\n\t\e[0m";
 	std::cout << sizeof(*data) << std::endl;
 	std::cout << "\e[91mValues of data deserialize:\n\t\e[0m";
 	std::cout << data->s1 << " " << data->n << " " << data->s2 << std::endl;
