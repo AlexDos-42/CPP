@@ -18,7 +18,7 @@ int	main(void)
 	{
 		std::cerr << ex.what() << std::endl;
 	}
-    std::cout << julie;
+	std::cout << julie;
 	std::cout << std::endl;
 
 	std::cout << boby;
@@ -37,7 +37,7 @@ int	main(void)
 	{
 		std::cerr << ex.what() << std::endl;
 	}
-    std::cout << boby;
+	std::cout << boby;
 	std::cout << std::endl;
 
 	try
