@@ -2,7 +2,7 @@
 
 Convert::Convert(std::string str): m_str(str)
 {
-    Convert::convert();
+	Convert::convert();
 }
 
 Convert::Convert(const Convert &copy): m_str(copy.m_str), m_c(copy.m_c), m_i(copy.m_i), m_f(copy.m_f), m_d(copy.m_d)
@@ -16,32 +16,32 @@ Convert::~Convert()
 
 void Convert::setFlag(int i, std::string flag)
 {
-    m_flag[i] = flag;
+	m_flag[i] = flag;
 }
 
 std::string Convert::getFlag(int i) const
 {
-    return(m_flag[i]);
+	return(m_flag[i]);
 }
 
 char Convert::getChar() const
 {
-    return(m_c);
+	return(m_c);
 }
 
 int Convert::getInt() const
 {
-    return(m_i);
+	return(m_i);
 }
 
 float Convert::getFloat() const
 {
-    return(m_f);
+	return(m_f);
 }
 
 double Convert::getDouble() const
 {
-    return(m_d);
+	return(m_d);
 }
 
 int		Convert::isChar(std::string str) const
@@ -131,7 +131,7 @@ int		Convert::isDot() const
 
 void		Convert::convert_c()
 {
-    m_c = m_str[0];
+	m_c = m_str[0];
 	m_i = static_cast<int>(m_c);
 	m_f = static_cast<float>(m_c);
 	m_d = static_cast<double>(m_c);
@@ -139,24 +139,24 @@ void		Convert::convert_c()
 
 void		Convert::convert_i()
 {
-    long int tmp;
-    tmp = std::atol(m_str.c_str());
-    if (tmp > std::numeric_limits<int>::max()
-    || tmp < std::numeric_limits<int>::min())
-    {
-        for (int i = 0; i < 4; i++)
-            Convert::setFlag(i, "impossible");
-        return ;
-    }
-    m_i = std::atoi(m_str.c_str());
-    m_c = static_cast<char>(m_i);
-    m_f = static_cast<float>(m_i);
-    m_d = static_cast<double>(m_i);
+	long int tmp;
+	tmp = std::atol(m_str.c_str());
+	if (tmp > std::numeric_limits<int>::max()
+    	|| tmp < std::numeric_limits<int>::min())
+	{
+        	for (int i = 0; i < 4; i++)
+        	    	Convert::setFlag(i, "impossible");
+        	return ;
+    	}
+    	m_i = std::atoi(m_str.c_str());
+    	m_c = static_cast<char>(m_i);
+    	m_f = static_cast<float>(m_i);
+    	m_d = static_cast<double>(m_i);
 }
 
 void		Convert::convert_f()
 {
-    m_f = std::atof(m_str.c_str());
+	m_f = std::atof(m_str.c_str());
 	m_c = static_cast<char>(m_f);
 	m_i = static_cast<int>(m_f);
 	m_d = static_cast<double>(m_f);
@@ -164,24 +164,24 @@ void		Convert::convert_f()
 
 void		Convert::convert_d()
 {
-    m_d = std::atof(m_str.c_str());
-    m_c = static_cast<char>(m_d);
-    m_i = static_cast<int>(m_d);
-    m_f = static_cast<double>(m_d);
+	m_d = std::atof(m_str.c_str());
+	m_c = static_cast<char>(m_d);
+	m_i = static_cast<int>(m_d);
+	m_f = static_cast<double>(m_d);
 }
 
 void		Convert::convert()
 {
 	if (Convert::isChar(m_str))
-        convert_c();
+        	convert_c();
 	else
 	{
 		if (Convert::isInt(m_str))
-            convert_i();
+            		convert_i();
 		else if (Convert::isFloat(m_str) || m_str == "+inff" || m_str == "-inff" || m_str == "nanf")
-            convert_i();
+			convert_i();
 		else if (Convert::isDouble(m_str) || m_str == "+inf" || m_str == "-inf" || m_str == "nan")
-            convert_f();
+        		convert_f();
 		else
 		{
 			for (int i = 0; i < 4; i++)
