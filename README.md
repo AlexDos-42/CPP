@@ -12,5 +12,5 @@ Time to dive into Object Oriented Programming!
 |04		|[Polymorphisme sous-type, classes abstraites, interfaces](./CPP04)					|[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/alesanto/libasm)](https://github.com/JaeSeoKim/badge42)						|
 |05		|[Repetition et Exceptions](./CPP05)						|[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/alesanto/libasm)](https://github.com/JaeSeoKim/badge42)						|
 |06		|[Casts](./CPP06)						|[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/alesanto/libasm)](https://github.com/JaeSeoKim/badge42)						|
-|07		|[Templates](./CPP07)						|-						|
+|07		|[Templates](./CPP07)						|[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/alesanto/libasm)](https://github.com/JaeSeoKim/badge42)						|
 |08		|[Template de container, itérateurs, algorithmes](./CPP08)						|-						|
