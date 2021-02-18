@@ -8,7 +8,7 @@ class		Bureaucrat;
 
 class		Form
 {
-    private :
+	private :
 		std::string const		m_name;
 		bool					m_status;
 		int	const				m_signGrade;
@@ -29,17 +29,17 @@ class		Form
 		virtual void			execute(Bureaucrat const &executor) const;
 
 		struct GradeTooHighException: std::exception
-	    {
-            virtual const char *what() const throw(){
-                return ("Grade too High");
-            };
-        };
-        struct GradeTooLowException: std::exception
-        {
-            virtual const char *what() const throw(){
-                return ("Grade too Low");
-            };
-        };
+		{
+			virtual const char *what() const throw(){
+				return ("Grade too High");
+			};
+		};
+		struct GradeTooLowException: std::exception
+		{
+			virtual const char *what() const throw(){
+				return ("Grade too Low");
+			};
+		};
 		struct FormUnsignedException: std::exception
 		{
 			virtual const char *what() const throw(){
