@@ -11,7 +11,7 @@ Character::Character(const Character &ref)
 
 Character::~Character()
 {
-    std::cout << m_name << " is gone." << std::endl;
+	std::cout << m_name << " is gone." << std::endl;
 }
 
 Character	&Character::operator=(const Character &ref)
@@ -34,7 +34,7 @@ int		Character::getAP() const
 
 AWeapon		*Character::getWeapon() const
 {
-    if (m_weapon)
+	if (m_weapon)
 		return m_weapon;
 	return NULL;
 }
@@ -48,14 +48,14 @@ void		Character::recoverAP()
 
 void		Character::equip(AWeapon *weapon)
 {
-    if (weapon == m_weapon)
+	if (weapon == m_weapon)
 		std::cout << weapon->getName() << " is already in his hands." << std::endl;
 	m_weapon = weapon;
 }
 
 void		Character::attack(Enemy *enemy)
 {
-    if (!m_weapon)
+	if (!m_weapon)
 		std::cout << "No weapon equipped!" << std::endl;
 	else if (m_ap < m_weapon->getApCost())
 		std::cout << "Not enough energie to attack!" << std::endl;

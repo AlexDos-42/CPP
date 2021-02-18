@@ -30,20 +30,20 @@ FragTrap			&FragTrap::operator=(FragTrap const &ref)
 
 void	FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
-    if (m_ep < 25){
-        std::cout << m_name << ":\e[94m 'Hnngh! Empty!'\e[0m" << std::endl;
+	if (m_ep < 25){
+		std::cout << m_name << ":\e[94m 'Hnngh! Empty!'\e[0m" << std::endl;
 		std::cout << "➜ " << m_name << " does not have enough energy! (" << m_ep << "/" << m_max_ep << ")" << std::endl;
-    }
+	}
 	else
 	{
-        std::string attack[5] =
-        {
-            "Tornado of death and bullets !",
-            "The PUNCHline !",
-            "Lightening! Kukachow !",
-            "Grenade confetti !",
-            "Boogie time !"
-        };
+		std::string attack[5] =
+		{
+			"Tornado of death and bullets !",
+			"The PUNCHline !",
+			"Lightening! Kukachow !",
+			"Grenade confetti !",
+			"Boogie time !"
+		};
 		std::cout << m_name << " does \e[91m" << attack[rand() % 5] << "\e[0m attack to " << target << " with " << rand() % m_melee_dmg << " points of damage!" << std::endl;
 		m_ep = m_ep - 25;
 		std::cout << "➜ His Energy is now " << m_ep << "/" << m_max_ep << "." << std::endl;

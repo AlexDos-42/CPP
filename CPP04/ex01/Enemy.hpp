@@ -11,14 +11,14 @@ class Enemy
 		Enemy(const Enemy &ref);
 		virtual ~Enemy();
 		
-		Enemy	        &operator=(const Enemy&);
-		int		        getHp() const;
-		std::string	    getType() const;
+		Enemy			&operator=(const Enemy&);
+		int				getHp() const;
+		std::string		getType() const;
 		virtual void	takeDamage(int dmg);
 
 	private:
-		int		        m_hp;
-		std::string     m_type;
+		int				m_hp;
+		std::string		m_type;
 };
 
 #endif

@@ -8,7 +8,7 @@ ScavTrap::ScavTrap(): ClapTrap()
 	this->m_melee_dmg = 20;
 	this->m_range_dmg = 15;
 	this->m_armor = 3;
-    this->m_name = "A robot with no name";
+	this->m_name = "A robot with no name";
 	std::cout << m_name << ":\e[94m 'Booting sequence complete. Where is the door ?'\e[0m" << std::endl;
 }
 

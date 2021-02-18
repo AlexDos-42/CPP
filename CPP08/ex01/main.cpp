@@ -25,7 +25,6 @@ int main()
 		sp2.addNumber(70);
 		sp2.addNumber(240);
 		sp2.addNumber(3);
-		std::cout << "Span display: ";
 		sp2.display();
 		std::cout << sp2.shortestSpan() << std::endl;
 		std::cout << sp2.longestSpan() << std::endl;
@@ -41,7 +40,6 @@ int main()
 	{
 		sp3.addNumber(2147483647);
 		sp3.addNumber(-2147483648);
-		std::cout << "Span display: ";
 		sp3.display();
 		std::cout << sp3.shortestSpan() << std::endl;
 		std::cout << sp3.longestSpan() << std::endl;
@@ -52,7 +50,6 @@ int main()
 	}
 	std::cout << std::endl;
 	Span sp4 = Span(5);
-	std::cout << "Span display: ";
 	sp4.display();
 	try
 	{
@@ -72,10 +69,22 @@ int main()
 		sp5.addNumber(22);
 		sp5.addNumber(-8);
 		sp5.addNumber(-2);
-		std::cout << "Span display: ";
 		sp5.display();
 		std::cout << sp5.shortestSpan() << std::endl;
 		std::cout << sp5.longestSpan() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << std::endl;
+	Span sp6 = Span(5000);
+	try
+	{
+		sp6.addNumber(-2500, 2500);
+		std::cout << sp6.shortestSpan() << std::endl;
+		std::cout << sp6.longestSpan() << std::endl;
 	}
 	catch (std::exception &e)
 	{

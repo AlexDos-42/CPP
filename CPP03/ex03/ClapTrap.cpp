@@ -1,14 +1,14 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(): m_hp(100), m_max_hp(100), m_ep(100),
-    m_max_ep(100), m_lvl(1), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
+	m_max_ep(100), m_lvl(1), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
 {
-    this->m_name = "A robot with no name";
+	this->m_name = "A robot with no name";
 	std::cout << "ClapTrap " << m_name << " constructed" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name): m_hp(100), m_max_hp(100), m_ep(100),
-    m_max_ep(100), m_lvl(1), m_name(name), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
+	m_max_ep(100), m_lvl(1), m_name(name), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
 {
 	std::cout << "ClapTrap " << m_name << " constructed" << std::endl;
 }
@@ -51,31 +51,31 @@ void				ClapTrap::rangedAttack(std::string const &target)
 {
 	std::cout << m_name << ":\e[94m 'Sniped!'\e[0m" << std::endl;
 	std::cout << m_name << " launched a ranged attack at " << target << " causing "
-        << m_range_dmg << " points of damage!" << std::endl;
+		<< m_range_dmg << " points of damage!" << std::endl;
 }
 
 void				ClapTrap::meleeAttack(std::string const &target)
 {
 	std::cout << m_name << ":\e[94m 'Punching time!'\e[0m" << std::endl;
 	std::cout << "➜ " << m_name << " launched a melee attack at " << target << " causing "
-        << m_melee_dmg << " points of damage!" << std::endl;
+		<< m_melee_dmg << " points of damage!" << std::endl;
 }
 
 void				ClapTrap::takeDamage(unsigned int amount)
 {
 	int	dmg = amount - this->m_armor;
-    if (dmg < 0)
-        dmg = 0;
+	if (dmg < 0)
+		dmg = 0;
 	if (dmg <= 0){
-        std::cout << m_name << ":\e[94m 'Hey, check me out everybody! I'm dancin', I'm dancin'!'\e[0m" << std::endl;
-        std::cout << "➜ "<< this->m_name << " took " << dmg << " damage." << std::endl;
+		std::cout << m_name << ":\e[94m 'Hey, check me out everybody! I'm dancin', I'm dancin'!'\e[0m" << std::endl;
+		std::cout << "➜ "<< this->m_name << " took " << dmg << " damage." << std::endl;
 		return ;
-    }
-    std::cout << m_name << ":\e[94m 'That looks like it hurts!'\e[0m" << std::endl;
-    m_hp -= dmg;
+	}
+	std::cout << m_name << ":\e[94m 'That looks like it hurts!'\e[0m" << std::endl;
+	m_hp -= dmg;
 	if (m_hp < 0)
 		m_hp = 0;
-    std::cout << "➜ " << m_name << " takes " << dmg << " damage and now have " << m_hp << " hp." << std::endl;
+	std::cout << "➜ " << m_name << " takes " << dmg << " damage and now have " << m_hp << " hp." << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -86,4 +86,3 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	std::cout << m_name << ":\e[94m 'I found health!'\e[0m" << std::endl;
 	std::cout << "➜ He has now " << m_hp << " hp." << std::endl;
 }
-

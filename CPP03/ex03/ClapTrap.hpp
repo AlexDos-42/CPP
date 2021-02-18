@@ -13,7 +13,7 @@ class ClapTrap
 
 	int					getHp();
 	std::string			getName();
-	
+
 	ClapTrap	&operator=(ClapTrap const &ref);
 	void		rangedAttack(std::string const &target);
 	void		meleeAttack(std::string const &target);

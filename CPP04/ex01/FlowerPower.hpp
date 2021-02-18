@@ -11,7 +11,7 @@ class FlowerPower: public AWeapon
 		FlowerPower(const FlowerPower &ref);
 		virtual ~FlowerPower();
 
-		FlowerPower	    &operator=(const FlowerPower&);
+		FlowerPower		&operator=(const FlowerPower&);
 		virtual void	attack() const;
 };
 

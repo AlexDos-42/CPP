@@ -17,6 +17,6 @@ RadScorpion::~RadScorpion()
 
 RadScorpion		&RadScorpion::operator=(const RadScorpion &ref)
 {
-    Enemy::operator=(ref);
+	Enemy::operator=(ref);
 	return *this;
 }

@@ -37,8 +37,9 @@ void		Span::addNumber(int low, int max) {
 	{
 		if ((this->m_n - this->m_span.size()) < static_cast<unsigned long>(max - low))
 			throw Span::FullSpan();
-		for (int i = low; i <= max; i++)
-			this->m_span.push_back(i);
+		else
+			for (int i = low; i <= max; i++)
+				this->m_span.push_back(i);
 	}
 }
 
@@ -46,30 +47,27 @@ unsigned int	Span::shortestSpan()
 {
 	if (m_span.size() <= 1)
 		throw Span::NoSpan();
-	std::vector<int> tmp = m_span;
-	unsigned int sp;
-
-	std::sort(tmp.begin(), tmp.end());
-	sp = tmp[1] - tmp[0];
-	for (size_t i = 1; i < tmp.size() - 1; i++)
+	std::sort(m_span.begin(), m_span.end());
+	int shortSpan = m_span[1] - m_span[0];
+	for (size_t i = 1; i < m_span.size() - 1; i++)
 	{
-		if (sp > static_cast<unsigned int>(tmp[i + 1] - tmp[i]))
-			sp = tmp[i + 1] - tmp[i];
+		if (shortSpan > m_span[i + 1] - m_span[i])
+			shortSpan = m_span[i + 1] - m_span[i];
 	}
-	return (sp);
+	return (shortSpan);
 }
 
 unsigned int	Span::longestSpan()
 {
 	if (m_span.size() <= 1)
 		throw Span::NoSpan();
-	std::vector<int> tmp = m_span;
-	std::sort(tmp.begin(), tmp.end());
-	return (tmp.back() - tmp.front());
+	std::sort(m_span.begin(), m_span.end());
+	return (m_span.back() - m_span.front());
 }
 
 void		Span::display() const
 {
+	std::cout << "Span display: ";
 	for (std::vector<int>::const_iterator it = m_span.begin(); it != m_span.end(); it++)
 		std::cout << *it << " ";
 	std::cout << std::endl;

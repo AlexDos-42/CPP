@@ -54,7 +54,7 @@ int main(void)
 	std::cout << *me;
 	me->recoverAP();
 	std::cout << *me;
-    me->attack(c);
+	me->attack(c);
 	std::cout << *me;
 	me->attack(c);
 	std::cout << *me;

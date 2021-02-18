@@ -25,7 +25,7 @@ class Span
 
 		struct FullSpan: std::exception{
 			virtual const char *what() const throw(){
-				return ("Span is full");
+				return ("Object is full");
 			};
 		};
 		struct NoSpan: std::exception{

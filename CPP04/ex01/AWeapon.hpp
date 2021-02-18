@@ -11,16 +11,16 @@ class AWeapon
 		AWeapon(const AWeapon &ref);
 		virtual ~AWeapon();
 
-		AWeapon		    &operator=(const AWeapon&);
-		std::string	    getName() const;
-		int		        getApCost() const;
-		int		        getDamage() const;
+		AWeapon			&operator=(const AWeapon&);
+		std::string		getName() const;
+		int				getApCost() const;
+		int				getDamage() const;
 		virtual void	attack() const = 0;
 
 	protected:
 	std::string	m_name;
-	int		    m_apcost;
-	int		    m_damage;
+	int			m_apcost;
+	int			m_damage;
 };
 
 #endif

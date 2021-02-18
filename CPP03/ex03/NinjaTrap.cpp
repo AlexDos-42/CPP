@@ -9,7 +9,7 @@ NinjaTrap::NinjaTrap(): ClapTrap()
 	this->m_melee_dmg = 60;
 	this->m_range_dmg = 5;
 	this->m_armor = 0;
-    this->m_name = "A robot with no name";
+	this->m_name = "A robot with no name";
 	std::cout << m_name << ":\e[94m 'Here I come to save the day!'\e[0m" << std::endl;
 }
 
@@ -45,7 +45,7 @@ void	NinjaTrap::ninjaShoebox(ClapTrap &clap)
 {
 	std::cout << m_name << ":\e[94m 'Laaasers!'\e[0m" << std::endl;
 	std::cout << m_name << " launched a shuriken at " << clap.getName() << ", a ClapTrap, causing "
-        << m_range_dmg << " points of damage!" << std::endl;
+		<< m_range_dmg << " points of damage!" << std::endl;
 	clap.takeDamage(this->m_range_dmg);
 }
 
@@ -53,7 +53,7 @@ void	NinjaTrap::ninjaShoebox(FragTrap &clap)
 {
 	std::cout << m_name << ":\e[94m 'Sniped!'\e[0m" << std::endl;
 	std::cout << m_name << " launched a ranged attack at " << clap.getName() << ", a FragTrap, causing "
-        << m_range_dmg << " points of damage!" << std::endl;
+		<< m_range_dmg << " points of damage!" << std::endl;
 	clap.takeDamage(this->m_range_dmg);
 }
 
@@ -61,7 +61,7 @@ void	NinjaTrap::ninjaShoebox(ScavTrap &clap)
 {
 	std::cout << m_name << ":\e[94m 'Punching time!'\e[0m" << std::endl;
 	std::cout << "➜ " << m_name << " launched a melee attack at " << clap.getName() << ", a ScavTrap, causing "
-        << m_melee_dmg << " points of damage!" << std::endl;
+		<< m_melee_dmg << " points of damage!" << std::endl;
 	clap.takeDamage(this->m_melee_dmg);
 }
 
