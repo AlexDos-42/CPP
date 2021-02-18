@@ -2,14 +2,14 @@
 #include <cstdlib>
 
 FragTrap::FragTrap(): m_hp(100), m_max_hp(100), m_ep(100),
-    m_max_ep(100), m_lvl(1), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
+	m_max_ep(100), m_lvl(1), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
 {
-    this->m_name = "A robot with no name";
+	this->m_name = "A robot with no name";
 	std::cout << m_name << ":\e[94m 'Directive one: Protect humanity! Directive two: Obey Alesanto at all costs. Directive three: Dance! '\e[0m" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name): m_hp(100), m_max_hp(100), m_ep(100),
-    m_max_ep(100), m_lvl(1), m_name(name), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
+	m_max_ep(100), m_lvl(1), m_name(name), m_melee_dmg(30), m_range_dmg(20), m_armor(5)
 {
 	std::cout << m_name << ":\e[94m 'Directive one: Protect humanity! Directive two: Obey Alesanto at all costs. Directive three: Dance! '\e[0m" << std::endl;
 }
@@ -52,31 +52,31 @@ void				FragTrap::rangedAttack(std::string const &target)
 {
 	std::cout << m_name << ":\e[94m 'Sniped!'\e[0m" << std::endl;
 	std::cout << m_name << " launched a ranged attack at " << target << " causing "
-        << m_range_dmg << " points of damage!" << std::endl;
+		<< m_range_dmg << " points of damage!" << std::endl;
 }
 
 void				FragTrap::meleeAttack(std::string const &target)
 {
 	std::cout << m_name << ":\e[94m 'Punching time!'\e[0m" << std::endl;
 	std::cout << "➜ " << m_name << " launched a melee attack at " << target << " causing "
-        << m_melee_dmg << " points of damage!" << std::endl;
+		<< m_melee_dmg << " points of damage!" << std::endl;
 }
 
 void				FragTrap::takeDamage(unsigned int amount)
 {
 	int	dmg = amount - this->m_armor;
-    if (dmg < 0)
-        dmg = 0;
+	if (dmg < 0)
+		dmg = 0;
 	if (dmg <= 0){
-        std::cout << m_name << ":\e[94m 'Hey, check me out everybody! I'm dancin', I'm dancin'!'\e[0m" << std::endl;
-        std::cout << "➜ "<< this->m_name << " took " << dmg << " damage." << std::endl;
+		std::cout << m_name << ":\e[94m 'Hey, check me out everybody! I'm dancin', I'm dancin'!'\e[0m" << std::endl;
+		std::cout << "➜ "<< this->m_name << " took " << dmg << " damage." << std::endl;
 		return ;
-    }
-    std::cout << m_name << ":\e[94m 'That looks like it hurts!'\e[0m" << std::endl;
-    m_hp -= dmg;
+	}
+	std::cout << m_name << ":\e[94m 'That looks like it hurts!'\e[0m" << std::endl;
+	m_hp -= dmg;
 	if (m_hp < 0)
 		m_hp = 0;
-    std::cout << "➜ " << m_name << " takes " << dmg << " damage and now have " << m_hp << " hp." << std::endl;
+	std::cout << "➜ " << m_name << " takes " << dmg << " damage and now have " << m_hp << " hp." << std::endl;
 }
 
 void	FragTrap::beRepaired(unsigned int amount)
@@ -90,20 +90,20 @@ void	FragTrap::beRepaired(unsigned int amount)
 
 void	FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
-    if (m_ep < 25){
-        std::cout << m_name << ":\e[94m 'Hnngh! Empty!'\e[0m" << std::endl;
+	if (m_ep < 25){
+		std::cout << m_name << ":\e[94m 'Hnngh! Empty!'\e[0m" << std::endl;
 		std::cout << "➜ " << m_name << " does not have enough energy! (" << m_ep << "/" << m_max_ep << ")" << std::endl;
-    }
+	}
 	else
 	{
-        std::string attack[5] =
-        {
-            "Tornado of death and bullets !",
-            "The PUNCHline !",
-            "Lightening! Kukachow !",
-            "Grenade confetti !",
-            "Boogie time !"
-        };
+		std::string attack[5] =
+		{
+			"Tornado of death and bullets !",
+			"The PUNCHline !",
+			"Lightening! Kukachow !",
+			"Grenade confetti !",
+			"Boogie time !"
+		};
 		std::cout << m_name << " does \e[91m" << attack[rand() % 5] << "\e[0m attack to " << target << " with " << rand() % m_melee_dmg << " points of damage!" << std::endl;
 		m_ep = m_ep - 25;
 		std::cout << "➜ His Energy is now " << m_ep << "/" << m_max_ep << "." << std::endl;
