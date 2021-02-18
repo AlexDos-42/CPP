@@ -142,16 +142,16 @@ void		Convert::convert_i()
 	long int tmp;
 	tmp = std::atol(m_str.c_str());
 	if (tmp > std::numeric_limits<int>::max()
-    	|| tmp < std::numeric_limits<int>::min())
+	|| tmp < std::numeric_limits<int>::min())
 	{
-        	for (int i = 0; i < 4; i++)
-        	    	Convert::setFlag(i, "impossible");
-        	return ;
-    	}
-    	m_i = std::atoi(m_str.c_str());
-    	m_c = static_cast<char>(m_i);
-    	m_f = static_cast<float>(m_i);
-    	m_d = static_cast<double>(m_i);
+		for (int i = 0; i < 4; i++)
+			Convert::setFlag(i, "impossible");
+		return ;
+	}
+	m_i = std::atoi(m_str.c_str());
+	m_c = static_cast<char>(m_i);
+	m_f = static_cast<float>(m_i);
+	m_d = static_cast<double>(m_i);
 }
 
 void		Convert::convert_f()
@@ -173,15 +173,15 @@ void		Convert::convert_d()
 void		Convert::convert()
 {
 	if (Convert::isChar(m_str))
-        	convert_c();
+		convert_c();
 	else
 	{
 		if (Convert::isInt(m_str))
-            		convert_i();
+			convert_i();
 		else if (Convert::isFloat(m_str) || m_str == "+inff" || m_str == "-inff" || m_str == "nanf")
 			convert_i();
 		else if (Convert::isDouble(m_str) || m_str == "+inf" || m_str == "-inf" || m_str == "nan")
-        		convert_f();
+			convert_f();
 		else
 		{
 			for (int i = 0; i < 4; i++)

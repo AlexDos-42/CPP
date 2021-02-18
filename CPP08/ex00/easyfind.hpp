@@ -21,7 +21,7 @@ typename T::const_iterator easyfind(T const &cont, int n)
 		std::cout << "Element " << n << " at position " << distance(cont.begin(), it) << std::endl;
 	else
 		throw NotFound();
-    return it;
+	return it;
 }
 
 #endif

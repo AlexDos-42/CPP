@@ -16,6 +16,6 @@ void	display(const T &val)
 template <typename T>
 void	displayX2(const T &val)
 {
-    T tmp = val + val;
+	T tmp = val + val;
 	std::cout << tmp;
 }

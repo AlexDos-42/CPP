@@ -20,7 +20,7 @@ class		Form
 		Form(Form const &copy);
 		virtual ~Form();
 
-        Form					&operator=(Form const&);
+		Form					&operator=(Form const&);
 		std::string	const		getName() const;
 		bool					getStatus() const;
 		int						getGradeSign() const;

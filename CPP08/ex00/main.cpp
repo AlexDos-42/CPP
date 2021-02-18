@@ -22,7 +22,7 @@ int	main(void)
 		std::cout << e.what() << ": " << b << std::endl;
 	}
 
-    std::list<int> lst;
+	std::list<int> lst;
 	a = 8, b = 18;
 
 	lst.push_back(3);

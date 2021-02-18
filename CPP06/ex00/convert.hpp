@@ -32,7 +32,7 @@ class Convert
 		int		isFloat(std::string str) const;
 		int		isDouble(std::string str) const;
 		int		isDot() const;
-        
+
 	private:
 		std::string		m_str;
 		char			m_c;
