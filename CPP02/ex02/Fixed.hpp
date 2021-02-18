@@ -41,7 +41,7 @@ class Fixed
 	float				toFloat(void) const;
 
 	private:
-	int			        value;
+	int					value;
 	static const int	bits = 8;
 };
 

@@ -3,8 +3,7 @@
 # include <cmath>
 
 Fixed::Fixed(): value(0)
-{
-}
+{}
 
 Fixed::Fixed(int const n)
 {
@@ -165,8 +164,6 @@ Fixed	Fixed::operator--(int)
 	--(*this);
 	return ret;
 }
-
-//
 
 std::ostream		&operator<<(std::ostream &ost, Fixed const &ref)
 {
