@@ -17,7 +17,7 @@ class MateriaSource: public IMateriaSource
 
 	private:
 		AMateria	*m_materia[4];
-		int		    m_nb;
+		int			m_nb;
 };
 
 #endif

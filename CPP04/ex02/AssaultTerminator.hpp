@@ -11,11 +11,11 @@ class AssaultTerminator: public ISpaceMarine
 		AssaultTerminator(const AssaultTerminator &ref);
 		virtual ~AssaultTerminator();
 
-		AssaultTerminator	    &operator=(const AssaultTerminator&);
+		AssaultTerminator		&operator=(const AssaultTerminator&);
 		virtual ISpaceMarine	*clone() const;
-		virtual void		    battleCry() const;
-		virtual void		    rangedAttack() const;
-		virtual void		    meleeAttack() const;
+		virtual void			battleCry() const;
+		virtual void			rangedAttack() const;
+		virtual void			meleeAttack() const;
 };
 
 #endif

@@ -31,15 +31,15 @@ Character::~Character()
 
 Character		&Character::operator=(const Character &copy)
 {
-    this->m_name = copy.m_name;
+	this->m_name = copy.m_name;
 	this->m_nb = copy.m_nb;
-    for (int i = 0; i < 4; i++)
-    {
-        if (copy.m_materia[i])
-            this->m_materia[i] = copy.m_materia[i]->clone();
-        else
-            this->m_materia[i] = NULL;
-    }
+	for (int i = 0; i < 4; i++)
+	{
+		if (copy.m_materia[i])
+			this->m_materia[i] = copy.m_materia[i]->clone();
+		else
+			this->m_materia[i] = NULL;
+	}
 	return (*this);
 }
 

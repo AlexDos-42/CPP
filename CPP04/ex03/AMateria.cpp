@@ -21,16 +21,16 @@ AMateria::~AMateria()
 
 std::string const & AMateria::getType() const
 {
-    return m_type;
+	return m_type;
 }
 
 unsigned int AMateria::getXP() const
 {
-    return _xp;
+	return _xp;
 }
 
 void AMateria::use(ICharacter &target)
 {
-    (void)target;
-    _xp += 10;
+	(void)target;
+	_xp += 10;
 }
