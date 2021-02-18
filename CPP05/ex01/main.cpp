@@ -20,7 +20,7 @@ int	main(void)
 	{
 		std::cerr << ex.what() << std::endl;
 	}
-    std::cout << julie;
+	std::cout << julie;
 	std::cout << std::endl;
 
 	std::cout << boby;
@@ -39,7 +39,7 @@ int	main(void)
 	{
 		std::cerr << ex.what() << std::endl;
 	}
-    std::cout << boby;
+	std::cout << boby;
 	std::cout << std::endl;
 
 	try
@@ -59,8 +59,8 @@ int	main(void)
 	std::cout << std::endl;
 
 	try
-	{   
-        Bureaucrat mary("Mary", 151);
+	{
+		Bureaucrat mary("Mary", 151);
 		std::cout << mary;
 	}
 	catch (std::exception &ex)
