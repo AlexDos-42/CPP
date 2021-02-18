@@ -5,16 +5,16 @@
 
 class phonebook
 {
-    public:
-    phonebook();
-    ~phonebook();
+	public:
+		phonebook();
+		~phonebook();
 
-    void add();
-    void search();
+		void add();
+		void search();
 
-    private:
-    Contact book[8];
-    int nb;
+	private:
+		Contact book[8];
+		int nb;
 };
 
 #endif

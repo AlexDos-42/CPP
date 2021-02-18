@@ -5,16 +5,16 @@
 
 class Contact
 {
-    public:
-    Contact();
-    ~Contact();
+	public:
+		Contact();
+		~Contact();
 
-    void new_info();
-    void aff_info();
-    std::string getName(int nb);
+		void new_info();
+		void aff_info();
+		std::string getName(int nb);
 
-    private:
-        std::string info[11];
+	private:
+		std::string info[11];
 };
 
 #endif
