@@ -8,7 +8,7 @@ class		Bureaucrat;
 
 class		Form
 {
-    private :
+	private :
 		std::string const		m_name;
 		bool					m_status;
 		int	const				m_signGrade;
@@ -20,7 +20,7 @@ class		Form
 		Form(Form const &copy);
 		~Form();
 
-        Form					&operator=(Form const&);
+		Form					&operator=(Form const&);
 		std::string	const		getName() const;
 		bool					getStatus() const;
 		int						getGradeSign() const;
@@ -28,17 +28,17 @@ class		Form
 		void					beSigned(Bureaucrat &bureaucrat);
 
 		struct GradeTooHighException: std::exception
-	    {
-            virtual const char *what() const throw(){
-                return ("Grade too High");
-            };
-        };
-        struct GradeTooLowException: std::exception
-        {
-            virtual const char *what() const throw(){
-                return ("Grade too Low");
-            };
-        };
+		{
+			virtual const char *what() const throw(){
+				return ("Grade too High");
+			};
+		};
+		struct GradeTooLowException: std::exception
+		{
+			virtual const char *what() const throw(){
+				return ("Grade too Low");
+			};
+		};
 };
 
 std::ostream					&operator<<(std::ostream &os, Form const &f);

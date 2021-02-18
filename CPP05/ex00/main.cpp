@@ -57,8 +57,8 @@ int	main(void)
 	std::cout << std::endl;
 
 	try
-	{   
-        Bureaucrat mary("Mary", 151);
+	{
+		Bureaucrat mary("Mary", 151);
 		std::cout << mary;
 	}
 	catch (std::exception &ex)
