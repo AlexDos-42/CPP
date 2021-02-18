@@ -3,8 +3,8 @@
 
 int main()
 {
-    Human bob;
+	Human bob;
 
-    std::cout << bob.identify() << std::endl;
-    std::cout << bob.getBrain().identify() << std::endl;
+	std::cout << bob.identify() << std::endl;
+	std::cout << bob.getBrain().identify() << std::endl;
 }

@@ -2,7 +2,7 @@
 
 ZombieEvent::ZombieEvent()
 {
-    type = std::string();
+	type = std::string();
 }
 
 ZombieEvent::~ZombieEvent()
@@ -10,24 +10,24 @@ ZombieEvent::~ZombieEvent()
 
 void ZombieEvent::setZombieType(std::string str_type)
 {
-    type = str_type;
+	type = str_type;
 }
 
 Zombie *ZombieEvent::newZombie(std::string str)
 {
-    Zombie *zombie;
+	Zombie *zombie;
 
-    zombie = new Zombie(str, type);
-    zombie->advert();
-    return (zombie);
+	zombie = new Zombie(str, type);
+	zombie->advert();
+	return (zombie);
 }
 
 Zombie *ZombieEvent::randomChump()
 {
-    Zombie *zombie = 0;
-    std::string newname;
+	Zombie *zombie = 0;
+	std::string newname;
 
-    zombie = new Zombie(zombie->baptem(), type);
-    zombie->advert();
-    return (zombie);
+	zombie = new Zombie(zombie->baptem(), type);
+	zombie->advert();
+	return (zombie);
 }

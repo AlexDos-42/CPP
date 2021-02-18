@@ -9,16 +9,16 @@
 class NinjaTrap : public ClapTrap
 {
 	public:
-	NinjaTrap();
-	NinjaTrap(std::string name);
-	NinjaTrap(NinjaTrap const &ref);
-	~NinjaTrap();
+		NinjaTrap();
+		NinjaTrap(std::string name);
+		NinjaTrap(NinjaTrap const &ref);
+		~NinjaTrap();
 
-	NinjaTrap	&operator=(NinjaTrap const &ref);
-	void		ninjaShoebox(ClapTrap &clap);
-	void		ninjaShoebox(FragTrap &frag);
-	void		ninjaShoebox(ScavTrap &scav);
-	void		ninjaShoebox(NinjaTrap &ninja);
+		NinjaTrap	&operator=(NinjaTrap const &ref);
+		void		ninjaShoebox(ClapTrap &clap);
+		void		ninjaShoebox(FragTrap &frag);
+		void		ninjaShoebox(ScavTrap &scav);
+		void		ninjaShoebox(NinjaTrap &ninja);
 };
 
 #endif

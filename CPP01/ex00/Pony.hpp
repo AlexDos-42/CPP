@@ -7,17 +7,16 @@
 
 class Pony
 {
-    public:
-    Pony();
-    ~Pony();
-    
-    void New_name();
-    void gallop();
-    void eat();
+	public:
+		Pony();
+		~Pony();
+		
+		void New_name();
+		void gallop();
+		void eat();
 
-    private:
-    std::string name;
-
+	private:
+		std::string name;
 };
 
 #endif

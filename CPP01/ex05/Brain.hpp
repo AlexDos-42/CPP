@@ -6,15 +6,15 @@
 
 class Brain
 {
-    public:
-    Brain();
-    ~Brain();
+	public:
+		Brain();
+		~Brain();
 
-    std::string identify();
+		std::string identify();
 
-    private:
-    int IQ;
-    int weight;
+	private:
+		int IQ;
+		int weight;
 };
 
 #endif

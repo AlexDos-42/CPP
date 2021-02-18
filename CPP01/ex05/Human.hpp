@@ -5,15 +5,15 @@
 
 class Human
 {
-    public:
-    Human();
-    ~Human();
+	public:
+		Human();
+		~Human();
 
-    Brain &getBrain();
-    std::string identify();
+		Brain &getBrain();
+		std::string identify();
 
-    private:
-    Brain ownBrain;
+	private:
+		Brain ownBrain;
 };
 
 #endif

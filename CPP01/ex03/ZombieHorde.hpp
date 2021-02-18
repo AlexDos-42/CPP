@@ -7,17 +7,17 @@
 
 class ZombieHorde
 {
-    public:
-    ZombieHorde(int i);
-    ZombieHorde(std::string str_type, int i);
-    ~ZombieHorde();
+	public:
+		ZombieHorde(int i);
+		ZombieHorde(std::string str_type, int i);
+		~ZombieHorde();
 
-    void announce();
+		void announce();
 
-    private:
-    Zombie *zombie;
-    std::string type;
-    int n;
+	private:
+		Zombie *zombie;
+		std::string type;
+		int n;
 };
 
 

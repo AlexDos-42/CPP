@@ -2,7 +2,7 @@
 
 HumanB::HumanB(std::string str)
 {
-    name = str;
+	name = str;
 }
 
 HumanB::~HumanB()
@@ -10,10 +10,10 @@ HumanB::~HumanB()
 
 void HumanB::attack()
 {
-    std::cout << name << " attacks with his " << ownWeapon->getType() << std::endl;
+	std::cout << name << " attacks with his " << ownWeapon->getType() << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &str_Weapon)
 {
-    ownWeapon = &str_Weapon;
+	ownWeapon = &str_Weapon;
 }

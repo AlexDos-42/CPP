@@ -8,10 +8,10 @@ Human::~Human()
 
 Brain &Human::getBrain()
 {
-    return (ownBrain);
+	return (ownBrain);
 }
 
 std::string Human::identify()
 {
-    return (ownBrain.identify());
+	return (ownBrain.identify());
 }

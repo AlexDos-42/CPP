@@ -2,7 +2,7 @@
 
 HumanA::HumanA(std::string str, Weapon &type_weapon) : ownWeapon(type_weapon)
 {
-    name = str;
+	name = str;
 }
 
 HumanA::~HumanA()
@@ -10,5 +10,5 @@ HumanA::~HumanA()
 
 void HumanA::attack()
 {
-    std::cout << name << " attacks with his " << ownWeapon.getType() << std::endl;
+	std::cout << name << " attacks with his " << ownWeapon.getType() << std::endl;
 }
