@@ -1,5 +1,5 @@
 _BOLD		=\e[1m
-_R			=\e[0m
+_R		=\e[0m
 
 _RED		=\e[91m
 _GREEN		=\e[92m
